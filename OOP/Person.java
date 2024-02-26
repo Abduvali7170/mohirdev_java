@@ -1,18 +1,37 @@
 package OOP;
 
 public class Person {
-    // changed
-    public String firstname, lastname;
-    public int age;
-    public Person(){
-        this.firstname = "Abduvali";
-        this.lastname = "Karimov";
-        this.age = 39;
+    String name, address;
+    public Person(String name, String address){
+        this.name = name;
+        this.address = address;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Person[" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ']';
     }
 
     public static void main(String[] args) {
-        Person person = new Person();
-        System.out.println(person.firstname);
+        Person p = new Person("Abduvalijon Karimov", "Andijon tumani Damariq MFY Nodirabegim 97-uy");
+        System.out.println(p.toString());
     }
-
 }
