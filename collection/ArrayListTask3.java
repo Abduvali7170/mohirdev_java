@@ -31,21 +31,21 @@ public class ArrayListTask3 {
         // ArrayList Task3-a
         ArrayListTask3 Task3 = new ArrayListTask3();
         System.out.println(Task3.getList());
-        Task3.teskari_tartibga_utkaz();
+        Task3.doing_reverse_order();
         System.out.println(Task3.getList());
-        Task3.teskari_tartibga_utkaz();
+        Task3.doing_reverse_order();
 
         // ArrayList Task3-b
-        System.out.println(Task3.qism_ol(3,5));
-        System.out.println(Task3.qism_ol(-10,10));
+        System.out.println(Task3.getSubList(3,5));
+        System.out.println(Task3.getSubList(-10,10));
 
     }
 
-    public void teskari_tartibga_utkaz(){
+    public void doing_reverse_order(){
         Collections.reverse(list);
     }
 
-    public ArrayList<String> qism_ol(int firstIndex, int lastIndex){
+    public ArrayList<String> getSubList(int firstIndex, int lastIndex){
         ArrayList<String> sublist = new ArrayList<>();
         int i = firstIndex;
         if(i < 0) i = 0;
